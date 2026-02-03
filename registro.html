@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoPro 360 | Registro de Usuario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="glass-card">
+            
+            <!-- Logotipo de la empresa -->
+            <div class="company-logo">
+                <!-- Logo principal -->
+                <img src="logo.png" alt="Logo MotoPro 360" class="main-logo">
+            </div>
+
+            <h1 class="login-title">REGISTRO DE USUARIO</h1>
+
+            <!-- Selector de Rol -->
+            <div class="role-selector">
+                <div class="role-option" id="roleUsuario">
+                    <div class="role-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="role-info">
+                        <h3>USUARIO</h3>
+                        <p>Para clientes que utilizan servicios de moto</p>
+                    </div>
+                    <div class="role-check">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+
+                <div class="role-option" id="roleComercio">
+                    <div class="role-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="role-info">
+                        <h3>COMERCIO</h3>
+                        <p>Para talleres, concesionarios y proveedores</p>
+                    </div>
+                    <div class="role-check">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de Registro -->
+            <form id="registroForm" class="form">
+                <!-- Sección Común para ambos roles -->
+                <div class="form-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-user-circle"></i>
+                        DATOS BÁSICOS
+                    </h2>
+                    
+                    <div class="input-group">
+                        <i class="fas fa-user icon-field"></i>
+                        <input type="text" id="nombre" placeholder="NOMBRE COMPLETO *" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-envelope icon-field"></i>
+                        <input type="email" id="email" placeholder="CORREO ELECTRÓNICO *" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-phone icon-field"></i>
+                        <input type="tel" id="telefono" placeholder="TELÉFONO *" required>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group half">
+                            <i class="fas fa-lock icon-field"></i>
+                            <input type="password" id="password" placeholder="CONTRASEÑA *" required>
+                        </div>
+                        <div class="input-group half">
+                            <i class="fas fa-lock icon-field"></i>
+                            <input type="password" id="confirmPassword" placeholder="CONFIRMAR CONTRASEÑA *" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección Específica para Comercio -->
+                <div class="form-section" id="seccionComercio">
+                    <h2 class="section-title">
+                        <i class="fas fa-building"></i>
+                        DATOS DEL COMERCIO
+                    </h2>
+                    
+                    <div class="input-group">
+                        <i class="fas fa-store icon-field"></i>
+                        <input type="text" id="nombreComercio" placeholder="NOMBRE DEL COMERCIO *">
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-id-card icon-field"></i>
+                        <input type="text" id="rfc" placeholder="RFC *">
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-file-invoice-dollar icon-field"></i>
+                        <input type="text" id="razonSocial" placeholder="RAZÓN SOCIAL">
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-map-marker-alt icon-field"></i>
+                        <input type="text" id="direccion" placeholder="DIRECCIÓN COMPLETA *">
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group half">
+                            <i class="fas fa-city icon-field"></i>
+                            <input type="text" id="ciudad" placeholder="CIUDAD *">
+                        </div>
+                        <div class="input-group half">
+                            <i class="fas fa-map-pin icon-field"></i>
+                            <input type="text" id="codigoPostal" placeholder="CÓDIGO POSTAL *">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-tag icon-field"></i>
+                        <select id="tipoComercio">
+                            <option value="">TIPO DE COMERCIO *</option>
+                            <option value="taller">Taller Mecánico</option>
+                            <option value="concesionario">Concesionario</option>
+                            <option value="refaccionaria">Refaccionaria</option>
+                            <option value="servicio">Servicio Especializado</option>
+                            <option value="distribuidor">Distribuidor</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-file-contract icon-field"></i>
+                        <textarea id="descripcion" placeholder="DESCRIPCIÓN DEL NEGOCIO" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <!-- Sección Específica para Usuario -->
+                <div class="form-section" id="seccionUsuario">
+                    <h2 class="section-title">
+                        <i class="fas fa-motorcycle"></i>
+                        DATOS DE LA MOTO
+                    </h2>
+                    
+                    <div class="input-row">
+                        <div class="input-group half">
+                            <i class="fas fa-tag icon-field"></i>
+                            <select id="marcaMoto">
+                                <option value="">MARCA</option>
+                                <option value="honda">Honda</option>
+                                <option value="yamaha">Yamaha</option>
+                                <option value="suzuki">Suzuki</option>
+                                <option value="kawasaki">Kawasaki</option>
+                                <option value="bmw">BMW</option>
+                                <option value="ducati">Ducati</option>
+                                <option value="ktm">KTM</option>
+                                <option value="harley">Harley-Davidson</option>
+                                <option value="otra">Otra</option>
+                            </select>
+                        </div>
+                        <div class="input-group half">
+                            <i class="fas fa-hashtag icon-field"></i>
+                            <input type="text" id="modeloMoto" placeholder="MODELO">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-calendar-alt icon-field"></i>
+                        <input type="text" id="anioMoto" placeholder="AÑO">
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-bolt icon-field"></i>
+                        <input type="text" id="cilindraje" placeholder="CILINDRAJE (cc)">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="recibirOfertas">
+                        <label for="recibirOfertas">Deseo recibir ofertas y promociones</label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terminos">
+                        <label for="terminos">Acepto los <a href="#" class="link-terminos">Términos y Condiciones</a></label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-main-login">
+                    <span>COMPLETAR REGISTRO</span>
+                </button>
+
+                <div class="login-link">
+                    <p>¿Ya tienes una cuenta? <a href="index.html" class="link-login">Inicia Sesión</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script-registro.js"></script>
+   
+   <!-- Script para verificar si el logo se cargó -->
+   <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const logo = document.querySelector('.main-logo');
+            if (logo) {
+                logo.onload = function() {
+                    console.log('✅ Logo cargado correctamente desde:', logo.src);
+                };
+                logo.onerror = function() {
+                    console.error('❌ ERROR: No se pudo cargar el logo desde:', logo.src);
+                    console.log('💡 Verifica que el archivo exista en: assets/images/logo.png');
+                };
+            }
+        });
+   </script>
+</body>
+</html>
