@@ -6,7 +6,7 @@
     <title>MotoPro 360 | Login Profesional</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
             <!-- Logotipo de la empresa -->
             <div class="company-logo">
                 <!-- Logo principal -->
-                <img src="logo.png" alt="Logo MotoPro 360" class="main-logo">
+                <img src="assets/images/logo.png" alt="Logo MotoPro 360" class="main-logo">
             </div>
 
             <h1 class="login-title">INICIO DE SESIÓN</h1>
@@ -41,13 +41,15 @@
                     <i class="fas fa-eye toggle-pass" id="togglePassword"></i>
                 </div>
 
-                <a href="#" class="btn-register">¡ REGÍSTRATE AQUÍ !</a>
+                
 
                 <button type="submit" class="btn-main-login">
                     <span>ACCEDER</span>
                 </button>
             </form>
-
+            
+            <p>No tienes cuenta aún?</p>
+            <a href="registro.html" class="btn-register">¡ REGÍSTRATE AQUÍ !</a>
             <!-- NUEVO: Login con Google -->
             <button type="button" class="btn-google" id="googleBtn">
                 <i class="fab fa-google"></i>
@@ -76,23 +78,9 @@
         </div>
     </div>
 
-   <script src="script.js"></script>
+   <script src="js/script.js"></script>
    
-   <!-- Script para verificar si el logo se cargó -->
-   <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const logo = document.querySelector('.main-logo');
-            if (logo) {
-                logo.onload = function() {
-                    console.log('✅ Logo cargado correctamente desde:', logo.src);
-                };
-                logo.onerror = function() {
-                    console.error('❌ ERROR: No se pudo cargar el logo desde:', logo.src);
-                    console.log('💡 Verifica que el archivo exista en: assets/images/logo.png');
-                    console.log('💡 Verifica que la ruta sea correcta (copia y pega en el explorador de archivos)');
-                };
-            }
-        });
-   </script>
+   <!-- Elimine el script porque solo sirve para ver si cargo en consola -->
+   
 </body>
 </html>

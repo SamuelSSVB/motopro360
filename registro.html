@@ -6,7 +6,7 @@
     <title>MotoPro 360 | Registro de Usuario</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
             <!-- Logotipo de la empresa -->
             <div class="company-logo">
                 <!-- Logo principal -->
-                <img src="logo.png" alt="Logo MotoPro 360" class="main-logo">
+                <img src="assets/images/logo.png" alt="Logo MotoPro 360" class="main-logo">
             </div>
 
             <h1 class="login-title">REGISTRO DE USUARIO</h1>
@@ -203,22 +203,8 @@
         </div>
     </div>
 
-    <script src="script-registro.js"></script>
+    <script src="js/script-registro.js"></script>
    
    <!-- Script para verificar si el logo se cargó -->
-   <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const logo = document.querySelector('.main-logo');
-            if (logo) {
-                logo.onload = function() {
-                    console.log('✅ Logo cargado correctamente desde:', logo.src);
-                };
-                logo.onerror = function() {
-                    console.error('❌ ERROR: No se pudo cargar el logo desde:', logo.src);
-                    console.log('💡 Verifica que el archivo exista en: assets/images/logo.png');
-                };
-            }
-        });
-   </script>
 </body>
 </html>
